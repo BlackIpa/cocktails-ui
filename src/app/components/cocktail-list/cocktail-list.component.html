@@ -1,23 +1,23 @@
 <div *ngIf="cocktails.length > 0; else noCocktails">
-  <mat-grid-list cols="3" rowHeight="1:1" gutterSize="10px">
-    <mat-grid-tile *ngFor="let cocktail of cocktails">
-			<mat-card class="example-card">
-				<mat-card-header>
-					<mat-card-title>{{ cocktail.name }}</mat-card-title>
-				</mat-card-header>
-				<img mat-card-image src="" alt="{{ cocktail.name }}">
-				<mat-card-content>
+  <div>
+    <div *ngFor="let cocktail of cocktails">
+			<div>
+				<div>
+					<div>{{ cocktail.name }}</div>
+				</div>
+				<img div-image src="" alt="{{ cocktail.name }}">
+				<div>
 					<p>{{ cocktail.preparationMethod }}</p>
 					<p>{{ cocktail.glassIcon }}</p>
-				</mat-card-content>
-				<mat-card-actions>
+				</div>
+				<div>
 					<button mat-button>FAV</button>
-				</mat-card-actions>
-			</mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+				</div>
+			</div>
+    </div>
+  </div>
 </div>
 
 <ng-template #noCocktails>
-  <p>No cocktails available at the moment.</p>
+  <p>{{ errorMessage }}</p>
 </ng-template>

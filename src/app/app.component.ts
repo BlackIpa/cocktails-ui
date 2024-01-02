@@ -12,5 +12,5 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'cocktails-ui';
+  title = 'DrinkIt';
 }

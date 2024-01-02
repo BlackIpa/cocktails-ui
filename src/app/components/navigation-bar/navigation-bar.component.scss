@@ -1,0 +1,25 @@
+mat-toolbar {
+  display: flex;
+  align-items: center;
+	background-color: #00071d;
+}
+
+.website-icon {
+  margin-right: 20px; /* Adjust spacing as needed */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px; /* Adjust spacing between buttons */
+}
+
+mat-icon {
+  margin-bottom: 5px; /* Space between icon and text */
+}
