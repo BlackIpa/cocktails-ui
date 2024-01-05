@@ -1,3 +1,58 @@
-  <span class="website-icon">
-    <img src="assets/images/logo.png" alt="My Website Logo" height="50">
-  </span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Offcanvas navbar large">
+	<div class="container-fluid">
+		<a class="navbar-brand" routerLink="">
+			<img src="assets/images/logo.png" width="50" height="50" alt="Logo">
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasNavbar2Label">Cocktail Canvas</h5>
+				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="navbar-nav col-12 col-lg-auto me-lg-auto mb-0">
+          <li class="nav-item">
+						<a class="nav-link" routerLinkActive="active" 
+						routerLink="/cocktails">Cocktails</a>
+					</li>
+          <li class="nav-item">
+						<a class="nav-link" routerLinkActive="active" 
+						routerLink="/ingredients">Ingredients</a>
+					</li>
+          <li class="nav-item">
+						<a class="nav-link" routerLinkActive="active" 
+						routerLink="/favorites">Favorites</a>
+					</li>
+        </ul>
+				
+				<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+					<li class="nav-item">
+						<a class="nav-link" routerLinkActive="active" routerLink="/signup">Sign Up</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" routerLinkActive="active" routerLink="/login">Sing In</a>
+					</li>
+				</ul>
+
+				<div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+					<form class="w-100 me-3 py-2 py-lg-0 search-form-width" role="search">
+						<input type="search" class="form-control" placeholder="Search cocktail..." aria-label="Search">
+					</form>
+	
+					<div class="flex-shrink-0 dropdown pt-2 pt-lg-0">
+						<a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="assets/images/user_icon.png" alt="mdo" width="32" height="32" class="rounded-circle">
+						</a>
+						<ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end text-small shadow">
+							<li><a class="dropdown-item" routerLink="/profile">Profile</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" routerLink="/signout">Sign out</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

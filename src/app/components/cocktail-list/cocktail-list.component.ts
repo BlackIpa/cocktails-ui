@@ -3,6 +3,7 @@ import { CocktailSummary } from '../../models/cocktail-summary.model';
 import { CocktailService } from '../../services/cocktail.service';
 import { CommonModule } from '@angular/common';
 import { Title } from '@angular/platform-browser';
+import { BASE_TITLE } from '../../constants';
 
 @Component({
   selector: 'app-cocktail-list',
@@ -19,7 +20,8 @@ export class CocktailListComponent {
 	constructor(private titleService: Title, private cocktailService: CocktailService) {}
 
 	ngOnInit(): void {
-		this.titleService.setTitle('Proper Cocktail | List');
+		const specificTitle = 'Cocktails';
+    this.titleService.setTitle(`${BASE_TITLE} | ${specificTitle}`);
 		this.cocktailService.getCocktails().subscribe({
 			next: (data) => {
 				this.cocktails = data;
