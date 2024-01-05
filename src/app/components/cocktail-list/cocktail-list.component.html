@@ -1,23 +1,25 @@
-<div *ngIf="cocktails.length > 0; else noCocktails">
-  <div>
-    <div *ngFor="let cocktail of cocktails">
-			<div>
+<div style="min-height: 1000px; margin-top: 120px;">
+	<div *ngIf="cocktails.length > 0; else noCocktails">
+		<div>
+			<div *ngFor="let cocktail of cocktails">
 				<div>
-					<div>{{ cocktail.name }}</div>
-				</div>
-				<img div-image src="" alt="{{ cocktail.name }}">
-				<div>
-					<p>{{ cocktail.preparationMethod }}</p>
-					<p>{{ cocktail.glassIcon }}</p>
-				</div>
-				<div>
-					<button mat-button>FAV</button>
+					<div>
+						<div>{{ cocktail.name }}</div>
+					</div>
+					<img div-image src="" alt="{{ cocktail.name }}">
+					<div>
+						<p>{{ cocktail.preparationMethod }}</p>
+						<p>{{ cocktail.glassIcon }}</p>
+					</div>
+					<div>
+						<button mat-button>FAV</button>
+					</div>
 				</div>
 			</div>
-    </div>
-  </div>
+		</div>
+	</div>
+	
+	<ng-template #noCocktails>
+		<p>{{ errorMessage }}</p>
+	</ng-template>
 </div>
-
-<ng-template #noCocktails>
-  <p>{{ errorMessage }}</p>
-</ng-template>
